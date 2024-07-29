@@ -1,22 +1,22 @@
 <template>
   <div>
     <el-row type="flex" justify="space-between" class="underline row-bg">
-      <span class="color"><b>科技特派员</b></span>
-      <!--      <span @click="goMore('工作状态')" class="liPointer">更多<i class="el-icon-d-arrow-right"></i> </span>-->
+      <span class="color"><b>科普文章</b></span>
+<!--      <span @click="goMore('工作状态')" class="liPointer">更多<i class="el-icon-d-arrow-right"></i> </span>-->
       <!--页面跳转实现-->
-      <router-link to="/home/xueShuJiaoLiu?title=xueShuJiaoLiu&id=25">
+      <router-link to="/home/kpArtcle?title=kpArtcle&id=23">
         <span  class="liPointer"> 更多<i class="el-icon-d-arrow-right"></i> </span>
       </router-link>
     </el-row>
-    <!--    <div style="max-height:420px;overflow:hidden;">-->
-    <!--      <ul>-->
-    <!--        <li :key="index" v-for="(item, index) in workList" class="liPointer">-->
-    <!--          <div @click="toWorkMsg(item.id)" class="bgc mart10" style="padding-left: 20px;">-->
-    <!--            {{ item.title }}-->
-    <!--          </div>-->
-    <!--        </li>-->
-    <!--      </ul>-->
-    <!--    </div>-->
+<!--    <div style="max-height:420px;overflow:hidden;">-->
+<!--      <ul>-->
+<!--        <li :key="index" v-for="(item, index) in workList" class="liPointer">-->
+<!--          <div @click="toWorkMsg(item.id)" class="bgc mart10" style="padding-left: 20px;">-->
+<!--            {{ item.title }}-->
+<!--          </div>-->
+<!--        </li>-->
+<!--      </ul>-->
+<!--    </div>-->
     <div style="max-height:420px;overflow:hidden;">
       <ul>
         <li class="lieBiao liPointer" :key="index" v-for="(item, index) in workList">
@@ -48,7 +48,7 @@ export default {
     getnews() {
       const data = {
         current: 1,
-        newsCategoryId: 38 || 39,
+        newsCategoryId: 35||36||37,
         size: 6
       }
       getNewsList(data)
@@ -73,14 +73,6 @@ export default {
       const url = this.$router.resolve({ path: '/home/news', query: { id: id } }).href;
       window.open(url, '_blank');
     },
-    goMore(val) {
-      this.$router.push({
-        path: 'moreMessage',
-        query: {
-          type: val
-        }
-      })
-    }
   }
 }
 </script>
@@ -108,7 +100,6 @@ export default {
 .underline {
   border-bottom: 1px solid rgb(1, 72, 153);
 }
-
 .lieBiao {
   width: 100%;
   height: 55px;
@@ -118,7 +109,6 @@ export default {
   overflow: hidden;
   margin-bottom: 10px;
 }
-
 .time {
   width: 100px;
   padding: 17px 0px;
@@ -128,7 +118,6 @@ export default {
   color: white;
   text-align: center;
 }
-
 .title {
   width: 500px;
   height: 50px;

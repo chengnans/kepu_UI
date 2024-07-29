@@ -39,7 +39,7 @@
 import globalTitle from '../globalTitle.vue'
 import { getMinTitle, getNewsList } from '../../api/api'
 export default {
-  name: 'zhengce',
+  name: 'kpArtcle',
   components: {
     globalTitle
   },

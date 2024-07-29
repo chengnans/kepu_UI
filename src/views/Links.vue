@@ -1,6 +1,5 @@
 <template>
   <div>
-
       <el-row class="underline marb20">
         <p class="color"><b>友情链接</b></p>
       </el-row>
@@ -12,8 +11,6 @@
         <li class="flex-item_other"><a href="http://dykexie.dongying.gov.cn/" class="anone" target="_blank">东营市科协</a></li>
         <li class="flex-item_other"><a href="http://www.cqast.cn/" class="anone" target="_blank">重庆市科协</a></li>
       </ul>
-
-
   </div>
 </template>
 <script>
@@ -25,7 +22,7 @@
   display: flex;
   flex-flow: row;
   justify-content: space-evenly;
-  padding: 10px;
+  padding: 5px;
   margin: 10px;
   list-style: none;
 }
@@ -36,6 +33,7 @@
   width: auto;
   height: auto;
   margin-top: 0px;
+  margin-bottom: 5px;
   line-height: 1px;
   color: white;
   font-weight: normal;

@@ -111,21 +111,21 @@ export default {
         case '1':
           return 'index'
         case '22':
-          return 'introduce'
+          return 'salt'
         case '23':
-          return 'zhengce'
+          return 'kpArtcle'
         case '24':
-          return 'keXieXiangMu'
+          return 'kpVideos'
         case '25':
-          return 'xueShuJiaoLiu'
+          return 'commissioner'
         case '26':
-          return 'banShiZhiNan'
+          return 'child'
         case '27':
-          return 'kePuFengCai'
+          return 'new_article'
         case '28':
           return 'xueXiaoShouYe'
         case '29':
-          return 'telephone'
+          return 'lecture_hall'
       }
     },
     handleSelect(key, keyPath) {

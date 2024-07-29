@@ -4,14 +4,14 @@ import Login from './components/Login.vue'
 import Home from './components/Home.vue'
 import NotFound from './components/NotFound.vue'
 import index from './components/page/index.vue'
-import introduce from './components/page/introduce.vue'
-import zhengce from './components/page/zhengce.vue'
-import keXieXiangMu from './components/page/keXieXiangMu.vue'
-import xueShuJiaoLiu from './components/page/xueShuJiaoLiu.vue'
-import banShiZhiNan from './components/page/banShiZhiNan.vue'
-import kePuFengCai from './components/page/kePuFengCai.vue'
+import salt from './components/page/salt.vue'
+import kpArtcle from './components/page/kpArticle.vue'
+import kpVideos from './components/page/kpVideos.vue'
+import commissioner from './components/page/commissioner.vue'
+import child from './components/page/child.vue'
+import new_article from './components/page/new_article.vue'
 import xueXiaoShouYe from './components/page/xueXiaoShouYe.vue'
-import telephone from './components/page/telephone.vue'
+import lecture_hall from './components/page/lecture_hall.vue'
 import News from './components/page/News.vue'
 // import moreMessage from './views/homePage/moreMessage'
 import Administrator from './components/Administrator/AdminHome.vue'
@@ -54,34 +54,34 @@ const router = new Router({
           component: index
         },
         {
-          path: 'introduce',
-          name: 'introduce',
-          component: introduce
+          path: 'salt',
+          name: 'salt',
+          component: salt
         },
         {
-          path: 'zhengce',
-          name: 'zhengce',
-          component: zhengce
+          path: 'kpArtcle',
+          name: 'kpArtcle',
+          component: kpArtcle
         },
         {
-          path: 'keXieXiangMu',
-          name: 'keXieXiangMu',
-          component: keXieXiangMu
+          path: 'kpVideos',
+          name: 'kpVideos',
+          component: kpVideos
         },
         {
-          path: 'xueShuJiaoLiu',
-          name: 'xueShuJiaoLiu',
-          component: xueShuJiaoLiu
+          path: 'commissioner',
+          name: 'commissioner',
+          component: commissioner
         },
         {
-          path: 'banShiZhiNan',
-          name: 'banShiZhiNan',
-          component: banShiZhiNan
+          path: 'child',
+          name: 'child',
+          component: child
         },
         {
-          path: 'kePuFengCai',
-          name: 'kePuFengCai',
-          component: kePuFengCai
+          path: 'new_article',
+          name: 'new_article',
+          component: new_article
         },
         {
           path: 'xueXiaoShouYe',
@@ -89,9 +89,9 @@ const router = new Router({
           component: xueXiaoShouYe
         },
         {
-          path: 'telephone',
-          name: 'telephone',
-          component: telephone
+          path: 'lecture_hall',
+          name: 'lecture_hall',
+          component: lecture_hall
         },
         // {
         //   path: 'moreMessage',

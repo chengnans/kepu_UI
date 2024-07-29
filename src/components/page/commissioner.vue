@@ -41,7 +41,7 @@ import globalTitle from '../globalTitle.vue'
 import { getMinTitle, getNewsList } from '../../api/api'
 export default {
   components: { globalTitle },
-  name: 'xueShuJiaoLiu',
+  name: 'commissioner',
   data() {
     return {
       cont: '',

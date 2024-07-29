@@ -28,21 +28,21 @@ export default {
   methods: {
     getTitle(v) {
       switch (v) {
-        case 'introduce':
+        case 'salt':
           return '盐碱地风采'
-        case 'zhengce':
+        case 'kpArtcle':
           return '科普文章'
-        case 'keXieXiangMu':
+        case 'kpVideos':
           return '科普视频'
-        case 'xueShuJiaoLiu':
+        case 'commissioner':
           return '科技特派员'
-        case 'banShiZhiNan':
+        case 'child':
           return '少儿科普'
-        case 'kePuFengCai':
+        case 'new_article':
           return '热点新闻'
         case 'xueXiaoShouYe':
           return '学校首页'
-        case 'telephone':
+        case 'lecture_hall':
           return '科普大讲堂'
       }
     }
