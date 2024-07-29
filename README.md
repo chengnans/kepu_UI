@@ -1,13 +1,12 @@
-# 新闻网站
+# 科普网站
 
 ## 框架
 
 ### [Vue](https://v2.cn.vuejs.org/) [Vue-cli](https://cli.vuejs.org/zh/guide/) [Element](https://element.eleme.io/#/zh-CN)
 
-## 推荐 IDE Setup
+## 后端
 
-- [VS Code](https://code.visualstudio.com/)
-- [后端源码链接](https://gitee.com/poxiaoyun/school-of-journalism-and-communication-website)
+- [后端源码链接](https://github.com/chengnans/kepu_Server)
 
 ## 目录
 
@@ -40,7 +39,7 @@
 
 #### 使用说明
 
-    把自己数据库用户名和密码设置为root和123456，也可以到后台配置文件中自行修改
+    后台配置文件中自行修改数据库用户名和密码
     请求路径改为/login，即http://localhost:8080/#/login，即可进入登录界面，输入用户名和密码即可进入管理员界面
 
 ## 预览
