@@ -31,7 +31,7 @@
           const data = {
             current: 1,
             newsCategoryId: 42,
-            size: 8
+            size: 4
           }
           getNewsList(data)
             .then(res => {

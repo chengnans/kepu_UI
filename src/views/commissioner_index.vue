@@ -22,7 +22,7 @@
   </div>
 </template>
 <script>
-import { getNewsList } from '../api/api'
+import { getNewsList } from '@/api/api'
 export default {
   name: 'commissioner_index',
   data() {

@@ -37,9 +37,9 @@ export default {
     //获取新闻列表
     getnews() {
       const data = {
-        current: 7,
+        current: 3,
         newsCategoryId: 42,
-        size: 8
+        size: 4
       }
       getNewsList(data)
         .then(res => {
