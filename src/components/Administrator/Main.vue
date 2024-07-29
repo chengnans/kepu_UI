@@ -147,11 +147,11 @@ export default {
           children: [
             {
               value: 27,
-              label: '简介'
+              label: '盐碱地1'
             },
             {
               value: 28,
-              label: '章程'
+              label: '盐碱地2'
             },
             {
               value: 29,
@@ -397,15 +397,16 @@ export default {
           }
         })
       }
+      // if (
+      //   (this.newsCategoryId == 27 && this.total == 1) ||
+      //   (this.newsCategoryId == 28 && this.total == 1) ||
+      //   (this.newsCategoryId == 29 && this.total == 1) ||
+      //   (this.newsCategoryId == 30 && this.total == 1) ||
+      //   (this.newsCategoryId == 31 && this.total == 1)
+      // ) {
+      //   this.$message.error('该新闻标题下只能存在一篇新闻')
+      // }
       if (
-        (this.newsCategoryId == 27 && this.total == 1) ||
-        (this.newsCategoryId == 28 && this.total == 1) ||
-        (this.newsCategoryId == 29 && this.total == 1) ||
-        (this.newsCategoryId == 30 && this.total == 1) ||
-        (this.newsCategoryId == 31 && this.total == 1)
-      ) {
-        this.$message.error('该新闻标题下只能存在一篇新闻')
-      } else if (
         this.newsCategoryId == 27 ||
         this.newsCategoryId == 28 ||
         this.newsCategoryId == 29 ||
