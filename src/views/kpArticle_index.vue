@@ -2,21 +2,10 @@
   <div>
     <el-row type="flex" justify="space-between" class="underline row-bg">
       <span class="color"><b>科普文章</b></span>
-<!--      <span @click="goMore('工作状态')" class="liPointer">更多<i class="el-icon-d-arrow-right"></i> </span>-->
-      <!--页面跳转实现-->
       <router-link to="/home/kpArtcle?title=kpArtcle&id=23">
         <span  class="liPointer"> 更多<i class="el-icon-d-arrow-right"></i> </span>
       </router-link>
     </el-row>
-<!--    <div style="max-height:420px;overflow:hidden;">-->
-<!--      <ul>-->
-<!--        <li :key="index" v-for="(item, index) in workList" class="liPointer">-->
-<!--          <div @click="toWorkMsg(item.id)" class="bgc mart10" style="padding-left: 20px;">-->
-<!--            {{ item.title }}-->
-<!--          </div>-->
-<!--        </li>-->
-<!--      </ul>-->
-<!--    </div>-->
     <div style="max-height:420px;overflow:hidden;">
       <ul>
         <li class="lieBiao liPointer" :key="index" v-for="(item, index) in workList">

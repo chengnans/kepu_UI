@@ -1,9 +1,9 @@
 <template>
 <!--  index_zong实现整个可变区域占宽100%-->
   <div class="index_zong">
+<!--    顶部轮播-->
 <!--  lunbo单独定义轮播图属性-->
   <div class="lunbo">
-    <!-- 首页上半部分 -->
     <el-row type="flex" class="row-bg">
       <div class="block marr10_new">
         <el-carousel height="450px" arrow="always" :interval="5000">
@@ -16,6 +16,8 @@
       </div>
     </el-row>
   </div>
+
+<!--    要闻热点-->
     <div class="box1">
       <el-row type="flex" class="row-bg underline marb10" justify="space-between">
         <span class="color"><b>要闻热点</b></span>
@@ -25,6 +27,7 @@
         </router-link>
       </el-row>
 
+<!--新闻轮播图实现-->
     <el-row type="flex" class="row-bg" justify="space-between">
       <div class="block marr10">
         <el-carousel height="450px" arrow="always" :interval="5000">
@@ -52,29 +55,26 @@
         <span  class="liPointer"> 更多<i class="el-icon-d-arrow-right"></i> </span>
       </router-link>
     </el-row>
-
     <el-row>
       <videos class="videos" />
     </el-row>
 
-
-
-    <el-row type="flex" class="row-bg underline marb10" justify="space-between">
-      <span class="color"><b>少儿科普</b></span>
-      <router-link to="/home/child?title=child&id=26">
-        <span  class="liPointer"> 更多<i class="el-icon-d-arrow-right"></i> </span>
-      </router-link>
-    </el-row>
+<!--少儿科普-->
     <el-row>
       <child_index class="child_index" />
     </el-row>
 
 
-      <!--      科技特派员-->
+      <!--科技特派员-->
       <el-row type="flex" class="row-bg">
         <commissioner_index class="commissioner_index" />
       </el-row>
 
+<!--科普大讲堂-->
+      <el-row>
+        <lecture_hall_index class="lecture_hall_index" />
+      </el-row>
+<!--友情链接-->
     <el-row>
       <Links class="Links" />
     </el-row>
@@ -91,12 +91,13 @@ import kpVideos from './kpVideos.vue'
 import child from './child.vue'
 import videos from '../../views/videos.vue'
 import child_index from '@/views/child_index.vue'
+import lecture_hall_index from '@/views/lecture_hall_index.vue'
 
 
 import { getNewsList } from '../../api/api'
 
 export default {
-  components: { news_article_index, kpArticle_index, videos, commissioner_index, Links, kpVideos, child, child_index},
+  components: { news_article_index, kpArticle_index, videos, commissioner_index, Links, kpVideos, child, child_index, lecture_hall_index},
   name: 'index',
   data() {
     return {
@@ -184,6 +185,9 @@ export default {
   margin-right: 0px;
 }
 .commissioner_index {
+  width: 100%;
+}
+.lecture_hall_index {
   width: 100%;
 }
 .Links {

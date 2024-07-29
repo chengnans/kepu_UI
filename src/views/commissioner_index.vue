@@ -7,15 +7,6 @@
         <span  class="liPointer"> 更多<i class="el-icon-d-arrow-right"></i> </span>
       </router-link>
     </el-row>
-    <!--    <div style="max-height:420px;overflow:hidden;">-->
-    <!--      <ul>-->
-    <!--        <li :key="index" v-for="(item, index) in workList" class="liPointer">-->
-    <!--          <div @click="toWorkMsg(item.id)" class="bgc mart10" style="padding-left: 20px;">-->
-    <!--            {{ item.title }}-->
-    <!--          </div>-->
-    <!--        </li>-->
-    <!--      </ul>-->
-    <!--    </div>-->
     <div style="max-height:420px;overflow:hidden;">
       <ul>
         <li class="lieBiao liPointer" :key="index" v-for="(item, index) in workList">
@@ -33,7 +24,7 @@
 <script>
 import { getNewsList } from '../api/api'
 export default {
-  name: 'work',
+  name: 'commissioner_index',
   data() {
     return {
       workList: []
@@ -72,38 +63,10 @@ export default {
       const url = this.$router.resolve({ path: '/home/news', query: { id: id } }).href;
       window.open(url, '_blank');
     },
-    goMore(val) {
-      this.$router.push({
-        path: 'moreMessage',
-        query: {
-          type: val
-        }
-      })
-    }
   }
 }
 </script>
 <style lang="less" scoped>
-//.underline {
-//  border-bottom: 1px solid rgb(1, 72, 153);
-//}
-//ul {
-//  padding-left: 0;
-//}
-//li {
-//  list-style: none;
-//  height: 60px;
-//  // background-color: salmon;
-//}
-//a {
-//  text-decoration: none;
-//}
-//.bgc {
-//  background: rgb(241, 241, 241);
-//  height: 55px;
-//  line-height: 55px;
-//}
-
 .underline {
   border-bottom: 1px solid rgb(1, 72, 153);
 }

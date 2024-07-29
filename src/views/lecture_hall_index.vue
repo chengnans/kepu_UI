@@ -1,8 +1,8 @@
 <template>
   <div>
     <el-row type="flex" class="row-bg underline marb10" justify="space-between">
-      <span class="color"><b>少儿科普</b></span>
-      <router-link to="/home/child?title=child&id=26">
+      <span class="color"><b>科普大讲堂</b></span>
+      <router-link to="/home/lecture_hall?title=lecture_hall&id=29">
         <span  class="liPointer"> 更多<i class="el-icon-d-arrow-right"></i> </span>
       </router-link>
     </el-row>
@@ -37,7 +37,7 @@ export default {
     //获取新闻列表
     getnews() {
       const data = {
-        current: 7,
+        current: 9,
         newsCategoryId: 42,
         size: 8
       }
