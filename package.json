@@ -26,8 +26,11 @@
     "less": "^3.9.0",
     "less-loader": "^4.1.0",
     "quill-image-extend-module": "^1.1.2",
+    "sass": "^1.27.0",
+    "sass-loader": "^10.0.4",
     "stylus": "^0.54.8",
     "vue-cli-plugin-element": "^1.0.1",
+    "vue-cli-plugin-element-plus": "~0.0.13",
     "vue-template-compiler": "^2.5.21"
   }
 }

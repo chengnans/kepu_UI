@@ -208,18 +208,18 @@ export default {
               value: 28,
               label: '盐碱地2'
             },
-            {
-              value: 29,
-              label: '组织结构'
-            },
-            {
-              value: 30,
-              label: '工作职责'
-            },
-            {
-              value: 31,
-              label: '专职人员'
-            }
+            // {
+            //   value: 29,
+            //   label: '组织结构'
+            // },
+            // {
+            //   value: 30,
+            //   label: '工作职责'
+            // },
+            // {
+            //   value: 31,
+            //   label: '专职人员'
+            // }
           ]
         },
         {

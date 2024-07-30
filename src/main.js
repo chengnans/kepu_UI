@@ -8,6 +8,7 @@ import './assets/fonts/iconfont.css'
 import './assets/css/global.css'
 import './assets/css/my_style.css'
 import axios from 'axios'
+import installElementPlus from './plugins/element'
 
 axios.defaults.withCredentials = true
 axios.interceptors.request.use(config => {
