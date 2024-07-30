@@ -122,25 +122,191 @@ export default {
       fuzzyForm: { fuzzytitle: '', fuzzytotal: 0, fuzzycurrent: 1, fuzzysize: 6 }, //模糊查询列表对象
       value: [],
       options: [
+        // {
+        //   value: 1,
+        //   label: '首页',
+        //   children: [
+        //     {
+        //       value: 42,
+        //       label: '科普视频'
+        //     },
+        //     {
+        //       value: 43,
+        //       label: '工作动态'
+        //     },
+        //     {
+        //       value: 44,
+        //       label: '学院动态'
+        //     },
+        //   ]
+        // },
+        // //改归属
+        // {
+        //   value: 2,
+        //   label: '轮播图',
+        //   children: [
+        //     {
+        //       value: 45,
+        //       label: '轮播图'
+        //     }
+        //   ]
+        // },
+        // {
+        //   value: 27,
+        //   label: '热点新闻',
+        //   children: [
+        //     {
+        //       value: 40,
+        //       label: '新闻1'
+        //     },
+        //     {
+        //       value: 41,
+        //       label: '新闻2'
+        //     }
+        //   ]
+        // },
+        // {
+        //   value: 3,
+        //   label: '科普视频',
+        //   children: [
+        //     {
+        //       value: 42,
+        //       label: '科普视频'
+        //     }
+        //   ]
+        // },
+        // {
+        //   value: 22,
+        //   label: '盐碱地风采',
+        //   children: [
+        //     {
+        //       value: 27,
+        //       label: '盐碱地1'
+        //     },
+        //     {
+        //       value: 28,
+        //       label: '盐碱地2'
+        //     },
+        //     {
+        //       value: 29,
+        //       label: '组织结构'
+        //     },
+        //     {
+        //       value: 30,
+        //       label: '工作职责'
+        //     },
+        //     {
+        //       value: 31,
+        //       label: '专职人员'
+        //     }
+        //   ]
+        // },
+        // {
+        //   value: 23,
+        //   label: '科普文章',
+        //   children: [
+        //     {
+        //       value: 35,
+        //       label: '科普文章1'
+        //     },
+        //     {
+        //       value: 36,
+        //       label: '科普文章2'
+        //     },
+        //     {
+        //       value: 37,
+        //       label: '科普文章3'
+        //     }
+        //   ]
+        // },
+        // {
+        //   value: 25,
+        //   label: '科技特派员',
+        //   children: [
+        //     {
+        //       value: 38,
+        //       label: '科技特派员1'
+        //     },
+        //     {
+        //       value: 39,
+        //       label: '科技特派员2'
+        //     }
+        //   ]
+        // }
+        //改归属
         {
-          value: 1,
-          label: '首页',
+          value: 2,
+          label: '轮播图',
+          children: [
+            {
+              value: 45,
+              label: '轮播图'
+            }
+          ]
+        },
+        {
+          value: 27,
+          label: '热点新闻',
+          children: [
+            {
+              value: 40,
+              label: '新闻1'
+            },
+            {
+              value: 41,
+              label: '新闻2'
+            }
+          ]
+        },
+        {
+          value: 23,
+          label: '科普文章',
+          children: [
+            {
+              value: 35,
+              label: '科普文章1'
+            },
+            {
+              value: 36,
+              label: '科普文章2'
+            },
+            {
+              value: 37,
+              label: '科普文章3'
+            }
+          ]
+        },
+        {
+          value: 3,
+          label: '科普视频',
           children: [
             {
               value: 42,
               label: '科普视频'
-            },
+            }
+          ]
+        },
+        {
+          value: 4,
+          label: '少儿科普',
+          children: [
             {
               value: 43,
-              label: '工作动态'
+              label: '少儿科普'
+            }
+          ]
+        },
+        {
+          value: 25,
+          label: '科技特派员',
+          children: [
+            {
+              value: 38,
+              label: '科技特派员1'
             },
             {
-              value: 44,
-              label: '学院动态'
-            },
-            {
-              value: 45,
-              label: '轮播图'
+              value: 39,
+              label: '科技特派员2'
             }
           ]
         },
@@ -171,48 +337,12 @@ export default {
           ]
         },
         {
-          value: 23,
-          label: '科普文章',
+          value: 5,
+          label: '科普大讲堂',
           children: [
             {
-              value: 35,
-              label: '科普文章1'
-            },
-            {
-              value: 36,
-              label: '科普文章2'
-            },
-            {
-              value: 37,
-              label: '科普文章3'
-            }
-          ]
-        },
-        {
-          value: 25,
-          label: '科技特派员',
-          children: [
-            {
-              value: 38,
-              label: '科技特派员1'
-            },
-            {
-              value: 39,
-              label: '科技特派员2'
-            }
-          ]
-        },
-        {
-          value: 27,
-          label: '热点新闻',
-          children: [
-            {
-              value: 40,
-              label: '新闻1'
-            },
-            {
-              value: 41,
-              label: '新闻2'
+              value: 44,
+              label: '科普大讲堂'
             }
           ]
         }

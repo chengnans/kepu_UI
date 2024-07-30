@@ -5,8 +5,8 @@
       <h2>{{ title }}</h2>
       <p>文章来源：{{ sources }}&emsp;作者：{{ author }}&emsp;发布日期：{{ releaseTime }}&emsp;点击量：[ {{ hits }} ]</p>
     </div>
-    <hr />
     <div v-html="content" class="ql-editor"></div>
+    <hr />
   </div>
 </template>
 <script>
@@ -43,7 +43,7 @@ export default {
         this.author = res.data.author
         this.sources = res.data.sources
       })
-    }
+    },
   }
 }
 </script>

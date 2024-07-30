@@ -74,6 +74,10 @@
       <el-row>
         <lecture_hall_index class="lecture_hall_index" />
       </el-row>
+<!--      评论功能测试-->
+<!--      <el-row>-->
+<!--        <review class="review" />-->
+<!--      </el-row>-->
 <!--友情链接-->
     <el-row>
       <Links class="Links" />
@@ -92,12 +96,13 @@ import child from './child.vue'
 import videos from '../../views/videos.vue'
 import child_index from '@/views/child_index.vue'
 import lecture_hall_index from '@/views/lecture_hall_index.vue'
+import review from '@/views/review.vue'
 
 
 import { getNewsList } from '../../api/api'
 
 export default {
-  components: { news_article_index, kpArticle_index, videos, commissioner_index, Links, kpVideos, child, child_index, lecture_hall_index},
+  components: { news_article_index, kpArticle_index, videos, commissioner_index, Links, kpVideos, child, child_index, lecture_hall_index, review},
   name: 'index',
   data() {
     return {
@@ -206,5 +211,8 @@ export default {
 .box1{
   width: 85%;
   margin: 0 auto
+}
+.review{
+  width: 100%;
 }
 </style>
