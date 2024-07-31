@@ -22,7 +22,7 @@
       //   this.getnews()
       // },
       created() {
-        console.log(123)
+        // console.log(123)
         this.getnews()
       },
       methods: {
@@ -35,7 +35,7 @@
           }
           getNewsList(data)
             .then(res => {
-              console.log(res)
+              // console.log(res)
               if (res.code == 200) {
                 this.videoList = res.data.records
                 // //后加

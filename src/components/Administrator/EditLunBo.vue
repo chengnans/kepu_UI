@@ -45,7 +45,7 @@ export default {
             size: 10, // 可选参数 图片大小，单位为M，1M = 1024kb
             action: 'http://localhost:7070/uploading',
             response: res => {
-              console.log(res)
+              // console.log(res)
               return 'http://localhost:7070/' + res.data
             },
             headers: xhr => {
@@ -97,8 +97,8 @@ export default {
   methods: {
     chooseFile(file) {
       this.pictureFile = file.target.files[0]
-      console.log(this.pictureFile)
-      console.log(file)
+      // console.log(this.pictureFile)
+      // console.log(file)
       return false
     },
     submit() {
@@ -115,13 +115,13 @@ export default {
       }
       // console.log(999)
       add(data, fd).then(res => {
-        console.log(res)
-        console.log(this.newsCategoryId)
+        // console.log(res)
+        // console.log(this.newsCategoryId)
         if (res.code != 200) {
           return this.$message.error('发布新闻失败，请重试！')
         } else {
           this.$message.success('新闻发布成功！')
-          console.log(this.content)
+          // console.log(this.content)
           this.$router.go(-1)
         }
       })

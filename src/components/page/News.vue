@@ -7,14 +7,25 @@
     </div>
     <div v-html="content" class="ql-editor"></div>
     <hr />
+<!--    <ComTest />-->
+<!--    <div v-html="http://localhost:8081/" />-->
+<!--    <iframe src="http://localhost:8081/"  width="100%" height="100%" scrolling="auto"></iframe>-->
+    <object
+      data="http://localhost:8081/"
+      type="text/html"
+      width="100%"
+      height="2000px"
+      >
+    </object>
+
   </div>
 </template>
 <script>
 import { getnew } from '../../api/api'
-import Video from '@/views/videos.vue'
+import ComTest from '@/views/ComTest.vue'
 export default {
   name: 'noticeMessage',
-  components: { Video },
+  components: {ComTest},
   data() {
     return {
       content: '',
@@ -34,7 +45,7 @@ export default {
     getalone() {
       const data = this.$route.query.id
       getnew(data).then(res => {
-        console.log(res)
+        // console.log(res)
         this.content = res.data.content
         this.hits = res.data.hits
         this.releaseTime = res.data.releaseTime

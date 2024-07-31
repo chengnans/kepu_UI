@@ -130,7 +130,7 @@ export default {
       })
       //如果用户点击确定则返回confirm
       //如果用户点击取消则返回cancel
-      console.log(res)
+      // console.log(res)
       if (res !== 'confirm') {
         return this.$message.info('已取消删除~')
       } else {

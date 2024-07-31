@@ -53,7 +53,7 @@ export default {
       }
       getNewsList(data)
         .then(res => {
-          console.log(res)
+          // console.log(res)
           if (res.code == 200) {
             this.noticeList = res.data.records
           }

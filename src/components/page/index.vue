@@ -120,8 +120,7 @@ export default {
   created() {
     this.getnews()
     this.getnews_news()
-    //测试
-    this.getvideos()
+
   },
   methods: {
     getnews() {
@@ -132,7 +131,7 @@ export default {
       }
       getNewsList(data)
         .then(res => {
-          console.log(res)
+          // console.log(res)
           if (res.code == 200) {
             this.imgList = res.data.records
           }
@@ -151,7 +150,7 @@ export default {
       }
       getNewsList(data_news)
         .then(res => {
-          console.log(res)
+          // console.log(res)
           if (res.code == 200) {
             this.imgList_news = res.data.records
           }

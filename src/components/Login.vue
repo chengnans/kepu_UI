@@ -44,7 +44,7 @@ export default {
         password: this.loginForm.password
       }
       login(data).then(res => {
-        console.log(res)
+        // console.log(res)
         if (res.code !== 200) {
           this.$message.error('登录失败！')
         } else if (res.data.role == '超级管理员') {

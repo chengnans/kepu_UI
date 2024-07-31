@@ -295,7 +295,7 @@ export default {
         author: this.editForm.author
       }
       update(data).then(res => {
-        console.log('dsadasas', res)
+        // console.log('dsadasas', res)
         if (res.code == 200) {
           this.editDialogVisible = false
           this.$message.success('修改新闻成功！')
@@ -354,17 +354,17 @@ export default {
       })
       //如果用户点击确定则返回confirm
       //如果用户点击取消则返回cancel
-      console.log(res)
+      // console.log(res)
       if (res !== 'confirm') {
         return this.$message.info('已取消删除~')
       } else {
-        console.log(id)
+        // console.log(id)
         const data = {
           id: id
         }
         //参数data 要以对象的形式传入
         deleteNew(data).then(res => {
-          console.log('>>>' + res)
+          // console.log('>>>' + res)
           if (res.code == 200) {
             this.$message.success('删除新闻成功！')
             this.query(this.newsCategoryId)
@@ -403,7 +403,7 @@ export default {
     //去往添加编辑页面
     goEdit(id) {
       let title = ''
-      console.log(this.value)
+      // console.log(this.value)
       if ((this.value.length = 2)) {
         let t = this.value[0]
         let i = this.value[1]

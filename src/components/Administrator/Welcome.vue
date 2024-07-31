@@ -29,7 +29,7 @@ export default {
     save() {
       //取到图片集合
       let uploadImglist = this.$refs.upload.uploadFiles
-      console.log(uploadImglist)
+      // console.log(uploadImglist)
       let formData = new FormData()
       uploadImglist.forEach(item => {
         //ready状态的是未上传的 success是已经上传成功的，只需要添加未上传的即可
@@ -40,14 +40,14 @@ export default {
       formData.get('file')
       fileUpload(formData).then(res => {
         //上传接口
-        console.log(res)
+        // console.log(res)
       })
     },
     // 预览图片
     handlePictureCardPreview(file) {
       this.dialogVisible = true
       this.dialogImageUrl = file.url
-      console.log(this.dialogImageUrl)
+      // console.log(this.dialogImageUrl)
     },
     // 删除图片
     handleRemove(file) {

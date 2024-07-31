@@ -51,14 +51,14 @@ export default {
   },
   methods: {
     handleCurrentChange(val) {
-      console.log(`当前页: ${val}`)
+      // console.log(`当前页: ${val}`)
       this.getnews(this.item)
     },
     getTitle() {
       const data = Number(this.$route.query.id)
       getMinTitle(data)
         .then(res => {
-          console.log(res)
+          // console.log(res)
           if (res.code == 200) {
             this.menuList = res.data
           }
@@ -75,7 +75,7 @@ export default {
       }
       getNewsList(data)
         .then(res => {
-          console.log(res)
+          // console.log(res)
           if (res.code == 200) {
             this.noticeList = res.data.records
             this.total = Number(res.data.total)
