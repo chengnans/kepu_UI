@@ -10,13 +10,13 @@
 <!--    <ComTest />-->
 <!--    <div v-html="http://localhost:8081/" />-->
 <!--    <iframe src="http://localhost:8081/"  width="100%" height="100%" scrolling="auto"></iframe>-->
-    <object
-      data="http://localhost:8081/"
-      type="text/html"
-      width="100%"
-      height="2000px"
-      >
-    </object>
+<!--    <object-->
+<!--      data="http://localhost:8081/"-->
+<!--      type="text/html"-->
+<!--      width="100%"-->
+<!--      height="2000px"-->
+<!--      >-->
+<!--    </object>-->
 
   </div>
 </template>

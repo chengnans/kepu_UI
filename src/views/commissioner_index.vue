@@ -1,12 +1,12 @@
 <template>
   <div>
-    <el-row type="flex" justify="space-between" class="underline row-bg">
-      <span class="color"><b>科技特派员</b></span>
-      <!--页面跳转实现-->
-      <router-link to="/home/commissioner?title=commissioner&id=25">
-        <span  class="liPointer"> 更多<i class="el-icon-d-arrow-right"></i> </span>
-      </router-link>
-    </el-row>
+<!--    <el-row type="flex" justify="space-between" class="underline row-bg">-->
+<!--      <span class="color"><b>科技特派员</b></span>-->
+<!--      &lt;!&ndash;页面跳转实现&ndash;&gt;-->
+<!--      <router-link to="/home/commissioner?title=commissioner&id=25">-->
+<!--        <span  class="liPointer"> 更多<i class="el-icon-d-arrow-right"></i> </span>-->
+<!--      </router-link>-->
+<!--    </el-row>-->
     <div style="max-height:420px;overflow:hidden;">
       <ul>
         <li class="lieBiao liPointer" :key="index" v-for="(item, index) in workList">

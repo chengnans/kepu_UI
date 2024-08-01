@@ -1,11 +1,11 @@
 <template>
   <div>
-    <el-row type="flex" justify="space-between" class="underline row-bg">
-      <span class="color"><b>科普文章</b></span>
-      <router-link to="/home/kpArtcle?title=kpArtcle&id=23">
-        <span  class="liPointer"> 更多<i class="el-icon-d-arrow-right"></i> </span>
-      </router-link>
-    </el-row>
+<!--    <el-row type="flex" justify="space-between" class="underline row-bg">-->
+<!--      <span class="color"><b>科普文章</b></span>-->
+<!--      <router-link to="/home/kpArtcle?title=kpArtcle&id=23">-->
+<!--        <span  class="liPointer"> 更多<i class="el-icon-d-arrow-right"></i> </span>-->
+<!--      </router-link>-->
+<!--    </el-row>-->
     <div style="max-height:420px;overflow:hidden;">
       <ul>
         <li class="lieBiao liPointer" :key="index" v-for="(item, index) in workList">

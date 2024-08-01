@@ -16,17 +16,19 @@
       </div>
     </el-row>
   </div>
-
-<!--    要闻热点-->
+<!--    热点新闻-->
     <div class="box1">
-      <el-row type="flex" class="row-bg underline marb10" justify="space-between">
-        <span class="color"><b>要闻热点</b></span>
-<!--页面跳转实现-->
-        <router-link to="/home/new_article?title=new_article&id=27">
-          <span  class="liPointer"> 更多<i class="el-icon-d-arrow-right"></i> </span>
-        </router-link>
-      </el-row>
 
+<!--      <el-row type="flex" class="row-bg underline marb10" justify="space-between">-->
+<!--        <span class="color"><b>要闻热点</b></span>-->
+<!--&lt;!&ndash;页面跳转实现&ndash;&gt;-->
+<!--        <router-link to="/home/new_article?title=new_article&id=27">-->
+<!--          <span  class="liPointer"> 更多<i class="el-icon-d-arrow-right"></i> </span>-->
+<!--        </router-link>-->
+<!--      </el-row>-->
+      <el-row>
+        <img src="http://localhost:7070/images/rdxw.png"  alt="rdxw" style="width: 100% ; height: auto"/>
+      </el-row>
 <!--新闻轮播图实现-->
     <el-row type="flex" class="row-bg" justify="space-between">
       <div class="block marr10">
@@ -43,41 +45,55 @@
     </el-row>
 
 
-    <!-- 首页下半部分 -->
+      <el-row>
+        <img src="http://localhost:7070/images/kpwz.png"  alt="kpwz" style="width: 100% ; height: auto"/>
+      </el-row>
     <el-row type="flex" class="row-bg">
       <kpArticle_index class="kpArticle_index" />
     </el-row>
 
 <!--科普视频列表实现-->
-    <el-row type="flex" class="row-bg underline marb10" justify="space-between">
-      <span class="color"><b>科普视频</b></span>
-      <router-link to="/home/kpVideos?title=kpVideos&id=24">
-        <span  class="liPointer"> 更多<i class="el-icon-d-arrow-right"></i> </span>
-      </router-link>
-    </el-row>
+<!--    <el-row type="flex" class="row-bg underline marb10" justify="space-between">-->
+<!--      <span class="color"><b>科普视频</b></span>-->
+<!--      <router-link to="/home/kpVideos?title=kpVideos&id=24">-->
+<!--        <span  class="liPointer"> 更多<i class="el-icon-d-arrow-right"></i> </span>-->
+<!--      </router-link>-->
+<!--    </el-row>-->
+      <br>
+      <el-row>
+        <img src="http://localhost:7070/images/kpsp.png"  alt="kpsp" style="width: 100% ; height: auto"/>
+      </el-row>
     <el-row>
       <videos class="videos" />
     </el-row>
 
 <!--少儿科普-->
+      <br>
+      <el-row>
+        <img src="http://localhost:7070/images/sekp.png"  alt="sekp" style="width: 100% ; height: auto"/>
+      </el-row>
     <el-row>
       <child_index class="child_index" />
     </el-row>
 
 
       <!--科技特派员-->
+      <el-row>
+        <img src="http://localhost:7070/images/kjtpy.png"  alt="kjtpy" style="width: 100% ; height: auto"/>
+      </el-row>
       <el-row type="flex" class="row-bg">
         <commissioner_index class="commissioner_index" />
       </el-row>
 
 <!--科普大讲堂-->
+      <br>
+      <el-row>
+        <img src="http://localhost:7070/images/kpdjt.png"  alt="kpdjt" style="width: 100% ; height: auto"/>
+      </el-row>
       <el-row>
         <lecture_hall_index class="lecture_hall_index" />
       </el-row>
-<!--      评论功能测试-->
-<!--      <el-row>-->
-<!--        <review class="review" />-->
-<!--      </el-row>-->
+
 <!--友情链接-->
     <el-row>
       <Links class="Links" />
@@ -96,13 +112,12 @@ import child from './child.vue'
 import videos from '../../views/videos.vue'
 import child_index from '@/views/child_index.vue'
 import lecture_hall_index from '@/views/lecture_hall_index.vue'
-import review from '@/views/review.vue'
 
 
 import { getNewsList } from '../../api/api'
 
 export default {
-  components: { news_article_index, kpArticle_index, videos, commissioner_index, Links, kpVideos, child, child_index, lecture_hall_index, review},
+  components: { news_article_index, kpArticle_index, videos, commissioner_index, Links, kpVideos, child, child_index, lecture_hall_index},
   name: 'index',
   data() {
     return {

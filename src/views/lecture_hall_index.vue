@@ -1,11 +1,11 @@
 <template>
   <div>
-    <el-row type="flex" class="row-bg underline marb10" justify="space-between">
-      <span class="color"><b>科普大讲堂</b></span>
-      <router-link to="/home/lecture_hall?title=lecture_hall&id=29">
-        <span  class="liPointer"> 更多<i class="el-icon-d-arrow-right"></i> </span>
-      </router-link>
-    </el-row>
+<!--    <el-row type="flex" class="row-bg underline marb10" justify="space-between">-->
+<!--      <span class="color"><b>科普大讲堂</b></span>-->
+<!--      <router-link to="/home/lecture_hall?title=lecture_hall&id=29">-->
+<!--        <span  class="liPointer"> 更多<i class="el-icon-d-arrow-right"></i> </span>-->
+<!--      </router-link>-->
+<!--    </el-row>-->
   <div class="video-list">
     <div class="video-item" @click="toNoticeMsg(item.id)" :key="index" v-for="(item, index) in videoList" >
       <!--      远程图片路径-->

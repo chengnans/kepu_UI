@@ -1,11 +1,11 @@
 <template>
   <div>
-    <el-row type="flex" class="row-bg underline marb10" justify="space-between">
-      <span class="color"><b>少儿科普</b></span>
-      <router-link to="/home/child?title=child&id=26">
-        <span  class="liPointer"> 更多<i class="el-icon-d-arrow-right"></i> </span>
-      </router-link>
-    </el-row>
+<!--    <el-row type="flex" class="row-bg underline marb10" justify="space-between">-->
+<!--      <span class="color"><b>少儿科普</b></span>-->
+<!--      <router-link to="/home/child?title=child&id=26">-->
+<!--        <span  class="liPointer"> 更多<i class="el-icon-d-arrow-right"></i> </span>-->
+<!--      </router-link>-->
+<!--    </el-row>-->
   <div class="video-list">
     <div class="video-item" @click="toNoticeMsg(item.id)" :key="index" v-for="(item, index) in videoList" >
       <!--      远程图片路径-->
@@ -37,7 +37,7 @@ export default {
     //获取新闻列表
     getnews() {
       const data = {
-        current: 1,
+        current: 3,
         newsCategoryId: 43,
         size: 4
       }
