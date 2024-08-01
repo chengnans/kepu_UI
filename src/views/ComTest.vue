@@ -122,6 +122,7 @@
 
 <script>
 import axios from "axios";
+import { getLoginUser } from '@/api/api'
 
 const clickoutside = {
   // 初始化指令
@@ -198,14 +199,15 @@ export default {
   created() {
     // 注意this
     // 获取用户登录信息
-    this.getLoginUser();
+    this.getLoginUser1();
   },
   methods: {
     myrefresh() {
       //console.log(this.userId)
       // alert(this.userId+"nmnm")
       //let url = `/api1/ts/tcomment/commentList/${this.itemId}/${this.userId}`
-      //查询评论信息列表展示, 文章id/用户id
+
+      查询评论信息列表展示, 文章id/用户id
       axios.get("http://localhost:7071/ts/tcomment/commentList/"+this.itemId+"/"+this.userId).then((res) => {
         if (res.data.success) {
           let list = res.data.data;
@@ -213,9 +215,25 @@ export default {
           this.comments = list.comments;
         }
       });
+
+      // getCommentList(data).then(res => {
+      //   this.comments = res.data.comments;
+      // })
     },
     getLoginUser() {
       // 后台session获取登录信息
+      // getLoginUser(data).then(res => {
+      //   this.user = res.data.user
+      //     if (res == null) {
+      //       this.avatar = "https://s1.ax1x.com/2022/06/10/Xc9lUf.png"; // 没登陆时，默认头像地址
+      //     } else {
+      //       this.username = res.data.username;
+      //       this.userId = res.data.id;
+      //       console.log(this.userId)
+      //       //alert(this.userId)
+      //       this.avatar = res.data.avatar;
+      //     }
+      // })
       axios.get("http://localhost:7071/ts/tuser/getLoginUser").then((res) => {
         if (res.data.success) {
           let user = res.data.data.user;
@@ -230,7 +248,8 @@ export default {
             this.avatar = user.avatar;
           }
         }
-      }).finally(()=>{
+      })
+.finally(()=>{
         this.myrefresh() // 刷新
       });
     },

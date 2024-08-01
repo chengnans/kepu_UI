@@ -70,7 +70,7 @@ export default {
     getnews() {
       const data = {
         current: this.currentPage,
-        newsCategoryId: 42,
+        newsCategoryId: 44,
         size: this.pageSize
       }
       getNewsList(data)

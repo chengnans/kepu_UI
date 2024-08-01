@@ -12,7 +12,7 @@
       <!--      <img :src="item.picturePath" :alt="item.title" class="video-thumbnail" />-->
       <!--      本地图片路径-->
       <img :src="'http://localhost:7070/' + item.picturePath" :alt="item.title" class="video-thumbnail" />
-      <div class="video-title">{{ item.title }}</div>
+<!--      <div class="video-title">{{ item.title }}</div>-->
     </div>
   </div>
   </div>
@@ -37,8 +37,8 @@ export default {
     //获取新闻列表
     getnews() {
       const data = {
-        current: 3,
-        newsCategoryId: 42,
+        current: 1,
+        newsCategoryId: 43,
         size: 4
       }
       getNewsList(data)

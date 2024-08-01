@@ -9,7 +9,7 @@
         <!--      <img :src="item.picturePath" :alt="item.title" class="video-thumbnail" />-->
         <!--      本地图片路径-->
         <img :src="'http://localhost:7070/' + item.picturePath" :alt="item.title" class="video-thumbnail" />
-        <div class="video-title">{{ item.title }}</div>
+<!--        <div class="video-title">{{ item.title }}</div>-->
       </div>
     </div>
     <!-- 分页 -->
@@ -70,7 +70,7 @@ export default {
     getnews() {
       const data = {
         current: this.currentPage,
-        newsCategoryId: 42,
+        newsCategoryId: 43,
         size: this.pageSize
       }
       getNewsList(data)

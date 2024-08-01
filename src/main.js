@@ -14,7 +14,7 @@ axios.interceptors.request.use(config => {
   config.headers.Authorization = window.sessionStorage.getItem('token')
   return config
 })
-//把这个包挂载到Vue的原型对象上
+// 把这个包挂载到Vue的原型对象上
 // Vue.prototype.$http = axios
 
 Vue.config.productionTip = false

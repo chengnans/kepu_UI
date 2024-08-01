@@ -7,6 +7,19 @@ import request from '../utils/request'
 //     params:data,
 //   })
 // }
+//获取评论列表
+// export const getCommentList = data => {
+//   return request({
+//     method: 'GET',
+//     url: `/commentList/${itemId}/${userId}`,
+//   })
+// }
+export const getLoginUser = data => {
+  return request({
+    method: 'GET',
+    url: `/tuser/getLoginUser`,
+  })
+}
 // 获取小标题
 export const getMinTitle = data => {
   return request({
