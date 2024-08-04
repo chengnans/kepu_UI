@@ -12,6 +12,7 @@
     "D": "^1.0.0",
     "element-ui": "^2.15.6",
     "node_module": "^0.0.0",
+    "qrcode": "^1.5.3",
     "quill-image-resize-module": "^3.0.0",
     "stylus-loader": "^3.0.2",
     "undraw-ui": "^1.1.5",

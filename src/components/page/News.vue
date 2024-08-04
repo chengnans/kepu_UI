@@ -7,6 +7,8 @@
     </div>
     <div v-html="content" class="ql-editor"></div>
     <hr />
+    <br>
+    <share/>
 <!--    <ComTest />-->
 <!--    <div v-html="http://localhost:8081/" />-->
 <!--    <iframe src="http://localhost:8081/"  width="100%" height="100%" scrolling="auto"></iframe>-->
@@ -22,10 +24,11 @@
 </template>
 <script>
 import { getnew } from '../../api/api'
-import ComTest from '@/views/ComTest.vue'
+import share from '@/views/share.vue'
 export default {
   name: 'noticeMessage',
-  components: {ComTest},
+  components: {share},
+  props: ["sysInfo"],
   data() {
     return {
       content: '',
@@ -34,7 +37,7 @@ export default {
       title: '',
       //后加
       sources: '',
-      author: ''
+      author: '',
     }
   },
   created() {
