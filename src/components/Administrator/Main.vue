@@ -140,11 +140,11 @@ export default {
           children: [
             {
               value: 40,
-              label: '新闻1'
+              label: '乡村振兴'
             },
             {
               value: 41,
-              label: '新闻2'
+              label: '三农发展'
             }
           ]
         },
@@ -154,15 +154,15 @@ export default {
           children: [
             {
               value: 35,
-              label: '科普文章1'
+              label: '科技名词'
             },
             {
               value: 36,
-              label: '科普文章2'
+              label: '科普&辟谣'
             },
             {
               value: 37,
-              label: '科普文章3'
+              label: '科普知识'
             }
           ]
         },
@@ -192,11 +192,11 @@ export default {
           children: [
             {
               value: 38,
-              label: '科技特派员1'
+              label: '科技动态'
             },
             {
               value: 39,
-              label: '科技特派员2'
+              label: '创新成果'
             }
           ]
         },
@@ -206,11 +206,11 @@ export default {
           children: [
             {
               value: 27,
-              label: '盐碱地1'
+              label: '发展成果'
             },
             {
               value: 28,
-              label: '盐碱地2'
+              label: '科研动态'
             },
             // {
             //   value: 29,

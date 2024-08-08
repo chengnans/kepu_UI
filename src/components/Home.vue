@@ -11,7 +11,8 @@
     <!-- 主页头部 -->
     <el-header>
       <div>
-        <img src="../assets/images/xiaohui4.png" alt="" style="width: auto" height="100"/>
+<!--        <img src="../assets/images/xiaohui4.png" alt="" style="width: auto" height="100"/>-->
+        <img src="../assets/images/xiaohui4.png" alt="" style="width: 100%; height: auto"/>
       </div>
 <!--      <div>-->
 <!--        <img src="../assets/images/bg.png" alt="" />-->
@@ -154,13 +155,17 @@ export default {
 }
 .el-header {
   background-color: rgb(255, 255, 255);
-  height: 10% !important;
-  //padding: 0 80px 0 120px;
-  padding: 0 0 0 0;
+  height: 12% !important;
+  padding: 0 80px 0 80px;
+  //padding: 0 0 0 0;
   overflow: hidden;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  img {
+    width: 100%;
+    height: auto;
+  }
 }
 //.el-menu {
 //  .el-menu-item {
@@ -199,6 +204,17 @@ export default {
     margin: 0;
     border-bottom: 2px solid transparent;
     color: #909399;
+  }
+}
+/* 响应式样式 */
+@media (max-width: 768px) {
+  .el-header {
+    height: 8%!important; /* 调整高度以适应较小的屏幕 */
+    padding: 0 0px 0 0px;
+  }
+
+  img {
+    max-width: 60%; /* 或者使用 max-width 限制图片最大宽度 */
   }
 }
 .main {

@@ -60,7 +60,7 @@ export default {
 .block div {
   img {
     width: 100%;
-    height: 100%; /* 确保图片高度随容器变化 */
+    height: auto; /* 确保图片高度随容器变化 */
     object-fit: cover;
   }
 }
@@ -68,14 +68,10 @@ export default {
   width: 100%;
   margin: 0 auto;
 }
-
-.el-carousel__container {
-  height: 300px !important; /* 默认设置为300px */
-}
-
+/* 添加响应式设计 */
 @media (max-width: 768px) {
-  .el-carousel__container {
-    height: 100px !important; /* 移动端设置为100px */
+  .carousel-image {
+    height: 300px; /* 或者根据你的需求调整高度 */
   }
 }
 </style>

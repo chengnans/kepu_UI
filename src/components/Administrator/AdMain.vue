@@ -86,7 +86,6 @@
             <el-input v-model="editForm.author"></el-input>
           </el-form-item>
           <el-form-item label="内容:" >
-            <el-button el-button class="add" type="success" icon="el-icon-plus" @click="goEdit(newsCategoryId)">点击在该列表下添加一条新闻</el-button>
 <!--            <el-input v-model="editForm.content"></el-input>-->
             <el-input   type="textarea" autosize placeholder="请输入内容" v-model="editForm.content"></el-input>
 <!--            <quill-editor ref="text" v-model="editForm.content" class="myQuillEditor" :options="editorOption" />-->
@@ -146,11 +145,11 @@ export default {
           children: [
             {
               value: 40,
-              label: '新闻1'
+              label: '乡村振兴'
             },
             {
               value: 41,
-              label: '新闻2'
+              label: '三农发展'
             }
           ]
         },
@@ -160,15 +159,15 @@ export default {
           children: [
             {
               value: 35,
-              label: '科普文章1'
+              label: '科技名词'
             },
             {
               value: 36,
-              label: '科普文章2'
+              label: '科普&辟谣'
             },
             {
               value: 37,
-              label: '科普文章3'
+              label: '科普知识'
             }
           ]
         },
@@ -198,11 +197,11 @@ export default {
           children: [
             {
               value: 38,
-              label: '科技特派员1'
+              label: '科技动态'
             },
             {
               value: 39,
-              label: '科技特派员2'
+              label: '创新成果'
             }
           ]
         },
@@ -212,11 +211,11 @@ export default {
           children: [
             {
               value: 27,
-              label: '盐碱地1'
+              label: '发展成果'
             },
             {
               value: 28,
-              label: '盐碱地2'
+              label: '科研动态'
             },
             // {
             //   value: 29,

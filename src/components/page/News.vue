@@ -91,7 +91,7 @@ export default {
 }
 
 .ql-editor iframe {
-  width: 100%;
+  width: 600px;
   height: 300px;
   margin: auto;
   display: block;
@@ -109,7 +109,9 @@ export default {
   }
 
   .ql-editor iframe {
+    width: 100%;
     height: 200px;
+    margin: auto;
   }
 }
 </style>
