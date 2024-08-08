@@ -85,8 +85,11 @@
           <el-form-item label="作者:">
             <el-input v-model="editForm.author"></el-input>
           </el-form-item>
-          <el-form-item label="内容:">
-            <el-input v-model="editForm.content"></el-input>
+          <el-form-item label="内容:" >
+            <el-button el-button class="add" type="success" icon="el-icon-plus" @click="goEdit(newsCategoryId)">点击在该列表下添加一条新闻</el-button>
+<!--            <el-input v-model="editForm.content"></el-input>-->
+            <el-input   type="textarea" autosize placeholder="请输入内容" v-model="editForm.content"></el-input>
+<!--            <quill-editor ref="text" v-model="editForm.content" class="myQuillEditor" :options="editorOption" />-->
           </el-form-item>
         </el-form>
         <span slot="footer" class="dialog-footer">
@@ -122,117 +125,6 @@ export default {
       fuzzyForm: { fuzzytitle: '', fuzzytotal: 0, fuzzycurrent: 1, fuzzysize: 6 }, //模糊查询列表对象
       value: [],
       options: [
-        // {
-        //   value: 1,
-        //   label: '首页',
-        //   children: [
-        //     {
-        //       value: 42,
-        //       label: '科普视频'
-        //     },
-        //     {
-        //       value: 43,
-        //       label: '工作动态'
-        //     },
-        //     {
-        //       value: 44,
-        //       label: '学院动态'
-        //     },
-        //   ]
-        // },
-        // //改归属
-        // {
-        //   value: 2,
-        //   label: '轮播图',
-        //   children: [
-        //     {
-        //       value: 45,
-        //       label: '轮播图'
-        //     }
-        //   ]
-        // },
-        // {
-        //   value: 27,
-        //   label: '热点新闻',
-        //   children: [
-        //     {
-        //       value: 40,
-        //       label: '新闻1'
-        //     },
-        //     {
-        //       value: 41,
-        //       label: '新闻2'
-        //     }
-        //   ]
-        // },
-        // {
-        //   value: 3,
-        //   label: '科普视频',
-        //   children: [
-        //     {
-        //       value: 42,
-        //       label: '科普视频'
-        //     }
-        //   ]
-        // },
-        // {
-        //   value: 22,
-        //   label: '盐碱地风采',
-        //   children: [
-        //     {
-        //       value: 27,
-        //       label: '盐碱地1'
-        //     },
-        //     {
-        //       value: 28,
-        //       label: '盐碱地2'
-        //     },
-        //     {
-        //       value: 29,
-        //       label: '组织结构'
-        //     },
-        //     {
-        //       value: 30,
-        //       label: '工作职责'
-        //     },
-        //     {
-        //       value: 31,
-        //       label: '专职人员'
-        //     }
-        //   ]
-        // },
-        // {
-        //   value: 23,
-        //   label: '科普文章',
-        //   children: [
-        //     {
-        //       value: 35,
-        //       label: '科普文章1'
-        //     },
-        //     {
-        //       value: 36,
-        //       label: '科普文章2'
-        //     },
-        //     {
-        //       value: 37,
-        //       label: '科普文章3'
-        //     }
-        //   ]
-        // },
-        // {
-        //   value: 25,
-        //   label: '科技特派员',
-        //   children: [
-        //     {
-        //       value: 38,
-        //       label: '科技特派员1'
-        //     },
-        //     {
-        //       value: 39,
-        //       label: '科技特派员2'
-        //     }
-        //   ]
-        // }
         //改归属
         {
           value: 2,
@@ -241,6 +133,10 @@ export default {
             {
               value: 45,
               label: '轮播图'
+            },
+            {
+              value: 29,
+              label: '新闻轮播图'
             }
           ]
         },
@@ -547,7 +443,6 @@ export default {
       if (
         this.newsCategoryId == 27 ||
         this.newsCategoryId == 28 ||
-        this.newsCategoryId == 29 ||
         this.newsCategoryId == 30 ||
         this.newsCategoryId == 31 ||
         this.newsCategoryId == 35 ||
@@ -563,7 +458,7 @@ export default {
       ) {
         this.$router.push({ path: '/administrator/edit', query: { id: id, title: title } })
         // console.log(this.newsCategoryId)
-      } else if (this.newsCategoryId == 45) {
+      } else if (this.newsCategoryId == 45||29) {
         this.$router.push({ path: '/administrator/editlunbo', query: { id: id, title: title } })
         // console.log(this.newsCategoryId);
       } else {

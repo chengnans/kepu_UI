@@ -9,6 +9,8 @@ import './assets/css/global.css'
 import './assets/css/my_style.css'
 import axios from 'axios'
 
+import Meta from 'vue-meta';
+Vue.use(Meta);
 axios.defaults.withCredentials = true
 axios.interceptors.request.use(config => {
   config.headers.Authorization = window.sessionStorage.getItem('token')

@@ -127,6 +127,10 @@ export default {
             {
               value: 45,
               label: '轮播图'
+            },
+            {
+              value: 29,
+              label: '新闻轮播图'
             }
           ]
         },
@@ -428,7 +432,6 @@ export default {
       if (
         this.newsCategoryId == 27 ||
         this.newsCategoryId == 28 ||
-        this.newsCategoryId == 29 ||
         this.newsCategoryId == 30 ||
         this.newsCategoryId == 31 ||
         this.newsCategoryId == 35 ||
@@ -444,7 +447,7 @@ export default {
       ) {
         this.$router.push({ path: '/administrator/edit', query: { id: id, title: title } })
         console.log(this.newsCategoryId)
-      } else if (this.newsCategoryId == 45) {
+      } else if (this.newsCategoryId == 45||29) {
         this.$router.push({ path: '/administrator/editlunbo', query: { id: id, title: title } })
         // console.log(this.newsCategoryId);
       } else {
@@ -464,5 +467,8 @@ export default {
 }
 .el-pagination {
   margin-top: 10px;
+}
+.myQuillEditor {
+  height: 350px;
 }
 </style>

@@ -17,14 +17,19 @@
 
 </script>
 <style lang="less" scoped>
-
 .flex-container_other {
   display: flex;
-  flex-flow: row;
+  flex-flow: row wrap; // 添加 wrap 使项目换行
   justify-content: space-evenly;
   padding: 5px;
   margin: 10px;
   list-style: none;
+
+  // 在小屏幕设备上调整为单列布局
+  @media screen and (max-width: 768px) {
+    flex-flow: column nowrap;
+    align-items: center; // 居中对齐
+  }
 }
 
 .flex-item_other {
@@ -39,7 +44,14 @@
   font-weight: normal;
   font-size: 1em;
   text-align: center;
+
+  // 在小屏幕设备上调整宽度和内边距
+  @media screen and (max-width: 768px) {
+    width: 100%; // 占据整个容器宽度
+    margin-bottom: 10px; // 增加底部内边距
+  }
 }
+
 //a标签跳转颜色设置
 a:link {
   color: #000000;
@@ -50,5 +62,4 @@ a:visited {
 a:hover {
   color: #007457;
 }
-
 </style>

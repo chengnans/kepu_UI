@@ -43,10 +43,10 @@ export default {
             name: 'file', // 图片参数名
             loading: true,
             size: 10, // 可选参数 图片大小，单位为M，1M = 1024kb
-            action: 'http://localhost:7070/uploading',
+            action: 'http://47.98.239.223:7070/uploading',
             response: res => {
               // console.log(res)
-              return 'http://localhost:7070/' + res.data
+              return 'http://47.98.239.223:7070/' + res.data
             },
             headers: xhr => {
               // axios.defaults.withCredentials = true;

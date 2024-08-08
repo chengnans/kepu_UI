@@ -12,7 +12,6 @@
           </li>
         </ul>
       </el-col>
-      <!-- 新闻内容 -->
       <el-card class="box-card">
         <p class="name">{{ this.cont }}</p>
         <hr class="namehr" />
@@ -20,8 +19,8 @@
           <div>
             <el-row class="marb10" :key="index" v-for="(item, index) in newsList">
               <div class="flex-v flex-between marb5 cursor" @click="show(item)">
-                <div>{{ item.title }}</div>
-                <div>{{ item.releaseTime }}</div>
+                <div class="title">{{ item.title }}</div>
+                <div class="releaseTime">{{ item.releaseTime }}</div>
               </div>
               <el-divider class="hr"></el-divider>
             </el-row>
@@ -40,11 +39,13 @@
 import globalTitle from '../globalTitle.vue'
 import { getMinTitle, getNewsList } from '../../api/api'
 export default {
-  components: { globalTitle },
-  name: 'commissioner',
+  name: 'kpArtcle',
+  components: {
+    globalTitle
+  },
   data() {
     return {
-      cont: '',
+      cont: '', //小标题变色
       menuList: [],
       newsList: [],
       pageSize: 8,
@@ -65,10 +66,6 @@ export default {
     }
   },
   methods: {
-    handleCurrentChange(val) {
-      // console.log(`当前页: ${val}`)
-      this.getnews(this.item)
-    },
     getTitle() {
       const data = Number(this.$route.query.id)
       getMinTitle(data)
@@ -106,6 +103,12 @@ export default {
           console.log(error)
         })
     },
+    handleCurrentChange(val) {
+      // console.log(`当前页: ${val}`)
+      // this.currentPage = val
+      this.getnews(this.item)
+    },
+    // 跳转到新闻展示页面
     show(item) {
       // console.log(item.id);
       // this.$router.push({ path: '/home/news', query: { id: item.id } })
@@ -119,7 +122,6 @@ export default {
 
 <style lang="less" scoped>
 ul {
-  width: 200px;
   li {
     background-color: rgb(242, 243, 245);
     height: 50px;
@@ -139,6 +141,40 @@ ul {
   .fenye {
     position: absolute;
     bottom: 10px;
+  }
+}
+// 添加响应式的样式
+@media screen and (max-width: 768px) {
+  .el-col {
+    margin-bottom: 0;
+  }
+
+  .box-card {
+    height: auto; // 移除固定高度，使其自适应内容
+  }
+
+  .name {
+    font-size: 18px;
+  }
+
+  ul li {
+    height: auto;
+    padding: 10px;
+    line-height: 18px;
+  }
+
+  .box-card {
+    .fenye {
+      position: static; // 移除绝对定位
+      text-align: center; // 居中文本
+      margin-top: 10px;
+    }
+    .title{
+      font-size: 13px;
+    }
+    .releaseTime{
+      font-size: 13px;
+    }
   }
 }
 </style>

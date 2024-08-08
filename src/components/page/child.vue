@@ -8,7 +8,7 @@
         <!--      远程图片路径-->
         <!--      <img :src="item.picturePath" :alt="item.title" class="video-thumbnail" />-->
         <!--      本地图片路径-->
-        <img :src="'http://localhost:7070/' + item.picturePath" :alt="item.title" class="video-thumbnail" />
+        <img :src="'http://47.98.239.223:7070/' + item.picturePath" :alt="item.title" class="video-thumbnail" />
 <!--        <div class="video-title">{{ item.title }}</div>-->
       </div>
     </div>

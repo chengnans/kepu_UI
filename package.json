@@ -4,12 +4,12 @@
   "private": true,
   "scripts": {
     "serve": "SET NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "SET NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "axios": "^0.18.0",
     "D": "^1.0.0",
+    "axios": "^0.18.0",
     "element-ui": "^2.15.6",
     "node_module": "^0.0.0",
     "qrcode": "^1.5.3",
@@ -17,6 +17,7 @@
     "stylus-loader": "^3.0.2",
     "undraw-ui": "^1.1.5",
     "vue": "^2.5.22",
+    "vue-meta": "^2.4.0",
     "vue-quill-editor": "^3.0.6",
     "vue-router": "^3.0.1"
   },
@@ -27,6 +28,7 @@
     "babel-plugin-component": "^1.1.1",
     "less": "^3.9.0",
     "less-loader": "^4.1.0",
+    "postcss-px-to-viewport": "^1.1.1",
     "quill-image-extend-module": "^1.1.2",
     "sass": "^1.27.0",
     "sass-loader": "^10.0.4",

@@ -89,6 +89,32 @@ export default {
 .underline {
   border-bottom: 1px solid rgb(1, 72, 153);
 }
+//.lieBiao {
+//  width: 100%;
+//  height: 55px;
+//  background: rgb(241, 241, 241);
+//  display: flex;
+//  justify-content: left;
+//  overflow: hidden;
+//  margin-bottom: 10px;
+//}
+//.time {
+//  width: 100px;
+//  padding: 17px 0px;
+//  display: flex;
+//  flex-direction: column;
+//  background-color: rgb(00, 116, 87);
+//  color: white;
+//  text-align: center;
+//}
+//.title {
+//  width: 500px;
+//  height: 50px;
+//  overflow: hidden;
+//  line-height: 50px;
+//  // background-color: rgb(179, 19, 19);
+//  padding: 0 0 0 10px;
+//}
 .lieBiao {
   width: 100%;
   height: 55px;
@@ -98,6 +124,7 @@ export default {
   overflow: hidden;
   margin-bottom: 10px;
 }
+
 .time {
   width: 100px;
   padding: 17px 0px;
@@ -106,13 +133,35 @@ export default {
   background-color: rgb(00, 116, 87);
   color: white;
   text-align: center;
+  font-size: 1rem; /* 使用 rem 单位 */
 }
+
 .title {
-  width: 500px;
+  width: calc(100% - 100px); /* 自动计算剩余宽度 */
   height: 50px;
   overflow: hidden;
   line-height: 50px;
-  // background-color: rgb(179, 19, 19);
   padding: 0 0 0 10px;
+  font-size: 1rem; /* 使用 rem 单位 */
+}
+
+/* 响应式样式 */
+@media (max-width: 768px) {
+  .lieBiao {
+    height: 2.5rem; /* 使用 rem 单位 */
+  }
+
+  .time {
+    width: 4rem; /* 使用 rem 单位 */
+    padding: 0.9rem 0; /* 使用 rem 单位 */
+    font-size: 0.6rem; /* 减小字体大小 */
+  }
+
+  .title {
+    width: calc(100% - 4rem); /* 自动计算剩余宽度 */
+    height: 3.2rem; /* 使用 rem 单位 */
+    font-size: 0.8rem; /* 减小字体大小 */
+    line-height: 2.6rem; /* 与高度匹配 */
+  }
 }
 </style>
