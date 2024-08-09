@@ -51,7 +51,7 @@
       </el-main>
     </el-container>
     <el-footer>Copyright © 青岛农业大学版权所有 鲁ICP备13028537号-5 鲁公网安备 37021402000104号</el-footer>
-    <el-footer>  地址：山东省 青岛市 城阳区 长城路700号 邮编：266109 电话：0532-58957222</el-footer>
+<!--    <el-footer>  地址：山东省 青岛市 城阳区 长城路700号 邮编：266109 电话：0532-58957222</el-footer>-->
   </el-container>
 </template>
 
@@ -221,11 +221,21 @@ export default {
   padding: 0px 0px;
 }
 .el-footer {
-  background-color: rgb(00, 116, 87);
-  font-size: 12px;
+  background-color: rgb(0, 116, 87);
+  font-size: 15px;
   color: white;
   text-align: center;
-  line-height: 30px;
+  padding: 10px 0;  // 上下内边距
+  display: flex;  // 使用 flexbox 布局
+  justify-content: center;  // 水平居中
+  align-items: center;  // 垂直居中
+  height: 60px;  // 设置固定高度
+
+  @media (max-width: 768px) {
+    font-size: 12px;  // 调整字体大小以适应较小屏幕
+    height: 50px;  // 移动端减少高度
+    padding: 5px 0;  // 移动端减少内边距
+  }
 }
 //全局box
 .box {
