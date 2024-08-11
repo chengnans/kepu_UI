@@ -66,7 +66,7 @@
         </div>
       </el-card>
       <!-- 修改新闻的对话框 -->
-      <el-dialog title="修改新闻" :visible.sync="editDialogVisible" width="50%" :before-close="handleClose">
+      <el-dialog title="修改新闻" :visible.sync="editDialogVisible" width="80%" :before-close="handleClose">
         <!-- rules表单验证规则，ref当前表单的验证对象 -->
         <el-form ref="editFormRef" :model="editForm" label-width="80px" status-icon>
           <el-form-item label="id:">
@@ -87,8 +87,9 @@
           </el-form-item>
           <el-form-item label="内容:" >
 <!--            <el-input v-model="editForm.content"></el-input>-->
-            <el-input   type="textarea" autosize placeholder="请输入内容" v-model="editForm.content"></el-input>
+<!--            <el-input   type="textarea" autosize placeholder="请输入内容" v-model="editForm.content"></el-input>-->
 <!--            <quill-editor ref="text" v-model="editForm.content" class="myQuillEditor" :options="editorOption" />-->
+              <quill-editor ref="text" v-model="editForm.content" class="myQuillEditor" :options="editorOption" />
           </el-form-item>
         </el-form>
         <span slot="footer" class="dialog-footer">
@@ -102,7 +103,14 @@
 
 <script>
 import { getNewsList, getnew, update, deleteNew, fuzzy } from '../../api/api'
+import { quillEditor, Quill } from 'vue-quill-editor'
+import 'quill/dist/quill.core.css'
+import 'quill/dist/quill.snow.css'
+import 'quill/dist/quill.bubble.css'
+import { container, ImageExtend, QuillWatch } from 'quill-image-extend-module'
+Quill.register('modules/ImageExtend', ImageExtend)
 export default {
+  components: { quillEditor },
   data() {
     return {
       search: '',
@@ -123,6 +131,51 @@ export default {
       fuzzytable: false, //模糊查询表格的显示
       fuzzyForm: { fuzzytitle: '', fuzzytotal: 0, fuzzycurrent: 1, fuzzysize: 6 }, //模糊查询列表对象
       value: [],
+      //
+      editorOption: {
+        modules: {
+          ImageExtend: {
+            // 如果不作设置，即{}  则依然开启复制粘贴功能且以base64插入
+            name: 'file', // 图片参数名
+            loading: true,
+            size: 10, // 可选参数 图片大小，单位为M，1M = 1024kb
+            action: 'http://47.98.239.223:7070/uploading',
+            response: res => {
+              // console.log(res)
+              return 'http://47.98.239.223:7070/' + res.data
+            },
+            headers: xhr => {
+              // axios.defaults.withCredentials = true;
+              // xhr.setRequestHeader('Cookie','NMTID=00OVM6QOJcTDVhqDUtvgSnd-5FBxLcAAAF9nTiDHg; JSESSIONID=5ACC52D29A2434E09450CB975E08C288')
+            }, // 可选参数 设置请求头部
+            sizeError: () => {}, // 图片超过大小的回调
+            start: () => {}, // 可选参数 自定义开始上传触发事件
+            end: () => {}, // 可选参数 自定义上传结束触发的事件，无论成功或者失败
+            error: () => {}, // 可选参数 上传失败触发的事件
+            success: () => {}, // 可选参数  上传成功触发的事件
+            change: (xhr, formData) => {
+              // formData.append('token', 'myToken')
+            } // 可选参数 每次选择图片触发，也可用来设置头部，但比headers多了一个参数，可设置formData
+          },
+          toolbar: [
+            [{ header: [1, 2, false] }],
+            ['bold', 'italic', 'underline', 'strike'],
+            [{ list: 'ordered' }, { list: 'bullet' }],
+            [{ script: 'sub' }, { script: 'super' }],
+            [{ indent: '-1' }, { indent: '+1' }],
+            [{ direction: 'rtl' }],
+            [{ size: ['small', false, 'large', 'huge'] }],
+            [{ header: [1, 2, 3, 4, 5, 6, false] }],
+            [{ font: [] }],
+            [{ color: [] }, { background: [] }],
+            [{ align: [] }],
+            ['clean'],
+            ['link', 'image', 'video']
+          ]
+        },
+        placeholder: '请输入内容'
+      },
+
       options: [
         //改归属
         {
@@ -477,5 +530,14 @@ export default {
 }
 .el-pagination {
   margin-top: 10px;
+}
+/* 限制弹窗对话框的高度 */
+.el-dialog__body {
+  max-height: 800px; /* 设定一个合适的最大高度 */
+  overflow-y: auto; /* 当内容超出时显示滚动条 */
+}
+.myQuillEditor .ql-container {
+  height: auto;
+  overflow-y: auto;
 }
 </style>

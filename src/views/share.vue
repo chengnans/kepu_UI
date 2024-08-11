@@ -19,6 +19,7 @@ export default {
   data() {
     return {
       shareUrl: location.href,
+      showQRCode: false, // 控制模态框的显示/隐藏
     };
   },
   methods: {
@@ -31,7 +32,7 @@ export default {
         "https://service.weibo.com/share/share.php?url=" +
         encodeURIComponent(this.shareUrl) +
         "&title=" +
-        this.sysInfo
+        this.sysInfo.title
       );
     },
     /**
@@ -43,9 +44,7 @@ export default {
         "https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=" +
         encodeURIComponent(this.shareUrl) +
         "&title=" +
-        this.sysInfo +
-        "&summary=" +
-        this.sysInfo
+        this.sysInfo.title
       );
     },
     /**
@@ -53,8 +52,10 @@ export default {
      */
     shareToWeChat() {
       localStorage.setItem("shareUrl", this.shareUrl); // 存储当前页面地址，前端页面直接根据URL链接生成二维码
-      let url = location.href.split("#")[0] + "#/Share/toWechat"; // 注意：#/Share/toWechat: 自己定义的路由
-      window.open(url);
+      // let url = location.href.split("#")[0] + "/toWechat"; // 注意：#/Share/toWechat: 自己定义的路由
+      // let url = location.href + "/toWechat"; // 注意：#/Share/toWechat: 自己定义的路由
+      // window.open(url);
+      this.$router.push('/toWechat');
     },
   },
 };

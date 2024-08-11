@@ -21,11 +21,17 @@ import Edit from './components/Administrator/Edit.vue'
 import EditLunBo from './components/Administrator/EditLunBo.vue'
 import AdMain from './components/Administrator/AdMain.vue'
 import AdEdit from './components/Administrator/AdEdit.vue'
+import toWechat from '@/components/page/toWechat.vue'
 
 Vue.use(Router)
 
 const router = new Router({
   routes: [
+    {
+      path: '/toWechat',
+      name: 'toWechat',
+      component: toWechat
+    },
     { path: '/', redirect: '/home' },
     { path: '/login', component: Login },
     {

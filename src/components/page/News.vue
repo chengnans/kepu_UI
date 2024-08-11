@@ -8,7 +8,7 @@
     <div v-html="content" class="ql-editor"></div>
     <hr />
     <br>
-    <share/>
+    <share :sys-info="{ title, sources, author }"/>
   </div>
 </template>
 <script>
