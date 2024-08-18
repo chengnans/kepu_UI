@@ -10,7 +10,7 @@
       <br>
       <el-row>
         <router-link to="/home/new_article?title=new_article&id=27">
-          <img src="http://47.98.239.223:7070/images/rdxw.png"  alt="rdxw" style="width: 100% ; height: 10%"/>
+          <img src="http://kepu.sd-smartagriculture.cn:7070/images/rdxw.png"  alt="rdxw" style="width: 100% ; height: 10%"/>
         </router-link>
       </el-row>
 <!--新闻轮播图实现-->
@@ -34,7 +34,7 @@
       <br>
       <el-row>
         <router-link to="/home/kpArtcle?title=kpArtcle&id=23">
-          <img src="http://47.98.239.223:7070/images/kpwz.png"  alt="kpwz" style="width: 100% ; height: 20%"/>
+          <img src="http://kepu.sd-smartagriculture.cn:7070/images/kpwz.png"  alt="kpwz" style="width: 100% ; height: 20%"/>
         </router-link>
       </el-row>
     <el-row type="flex" class="row-bg">
@@ -45,7 +45,7 @@
       <br>
       <el-row>
         <router-link to="/home/kpVideos?title=kpVideos&id=24">
-          <img src="http://47.98.239.223:7070/images/kpsp.png"  alt="kpsp" style="width: 100% ; height: 20%"/>
+          <img src="http://kepu.sd-smartagriculture.cn:7070/images/kpsp.png"  alt="kpsp" style="width: 100% ; height: 20%"/>
         </router-link>
       </el-row>
     <el-row>
@@ -56,7 +56,7 @@
       <br>
       <el-row>
         <router-link to="/home/child?title=child&id=26">
-          <img src="http://47.98.239.223:7070/images/sekp.png"  alt="sekp" style="width: 100% ; height: 20%"/>
+          <img src="http://kepu.sd-smartagriculture.cn:7070/images/sekp.png"  alt="sekp" style="width: 100% ; height: 20%"/>
         </router-link>
       </el-row>
     <el-row>
@@ -67,7 +67,7 @@
       <!--科技特派员-->
       <el-row>
         <router-link to="/home/commissioner?title=commissioner&id=25">
-          <img src="http://47.98.239.223:7070/images/kjtpy.png"  alt="kjtpy" style="width: 100% ; height: 20%"/>
+          <img src="http://kepu.sd-smartagriculture.cn:7070/images/kjtpy.png"  alt="kjtpy" style="width: 100% ; height: 20%"/>
         </router-link>
       </el-row>
       <el-row type="flex" class="row-bg">
@@ -78,7 +78,7 @@
       <br>
       <el-row>
         <router-link to="/home/lecture_hall?title=lecture_hall&id=29">
-          <img src="http://47.98.239.223:7070/images/kpdjt.png"  alt="kpdjt" style="width: 100% ; height: 20%"/>
+          <img src="http://kepu.sd-smartagriculture.cn:7070/images/kpdjt.png"  alt="kpdjt" style="width: 100% ; height: 20%"/>
         </router-link>
       </el-row>
       <el-row>

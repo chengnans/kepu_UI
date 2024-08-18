@@ -90,7 +90,7 @@ export default {
   mounted() {
     this.initTime()
     setInterval(this.initTime, 1000)
-    let api3 = 'http://47.98.239.223:7070/news_type/all'
+    let api3 = 'http://kepu.sd-smartagriculture.cn:7070/news_type/all'
     axios
       .get(api3)
       .then(res => {

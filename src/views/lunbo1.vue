@@ -556,7 +556,7 @@
     >
       <div v-for="(item, index) in imgList" :key="index" class="carousel-item">
 <!--        <div @click="handleClick(item.id)" class="carousel-item">-->
-          <img :src="'http://47.98.239.223:7070/' + item.picturePath" alt="" class="carousel-image" />
+          <img :src="'http://kepu.sd-smartagriculture.cn:7070/' + item.picturePath" alt="" class="carousel-image" />
 <!--        </div>-->
       </div>
     </div>

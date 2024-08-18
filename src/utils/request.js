@@ -1,5 +1,5 @@
 import axios from 'axios'
-let is_baseURL = 'http://47.98.239.223:7070' // 测试环境
+let is_baseURL = 'http://kepu.sd-smartagriculture.cn:7070' // 测试环境
 // 创建axios实例
 const request = axios.create({
   baseURL: is_baseURL,
