@@ -12,7 +12,7 @@
       <!--      <img :src="item.picturePath" :alt="item.title" class="video-thumbnail" />-->
       <!--      本地图片路径-->
       <img :src="'http://kepu.sd-smartagriculture.cn:7070/' + item.picturePath" :alt="item.title" class="video-thumbnail" />
-<!--      <div class="video-title">{{ item.title }}</div>-->
+      <div class="video-title">{{ item.title }}</div>
     </div>
   </div>
   </div>
