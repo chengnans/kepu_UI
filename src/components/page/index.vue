@@ -89,6 +89,11 @@
     <el-row>
       <Links class="Links" />
     </el-row>
+<!--      公众号图片-->
+      <div class="fixed1">
+        <a href="#"><img src="../../assets/images/gzh.png" alt=""/></a>
+        <p style="font-size: 9px">扫码关注，了解更多知识</p>
+      </div>
 
   </div>
   </div>
@@ -194,5 +199,10 @@ export default {
 .box1{
   width: 85%;
   margin: 0 auto
+}
+.fixed1 {
+  position: fixed;
+  top: 270px;
+  right: 2px;
 }
 </style>

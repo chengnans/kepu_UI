@@ -12,11 +12,11 @@
     <el-header>
       <div>
 <!--        <img src="../assets/images/xiaohui4.png" alt="" style="width: auto" height="100"/>-->
-        <img src="../assets/images/xiaohui4.png" alt="" style="width: 100%; height: auto"/>
+        <img src="../assets/images/logo1.png" alt="" style="width: 30%; height: auto"/>
       </div>
-<!--      <div>-->
-<!--        <img src="../assets/images/bg.png" alt="" />-->
-<!--      </div>-->
+      <div>
+        <img src="../assets/images/xiaohui4.png" alt="" />
+      </div>
     </el-header>
     <!-- 主页导航栏 -->
     <el-row>
